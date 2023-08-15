@@ -1,7 +1,6 @@
-import { lazy } from "react";
-import { Routes, Route } from "react-router-dom";
+import { lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { Layout } from 'components/Layout/Layout';
-import { StyledNav, StyledNavLink } from './App.styled';
 
 const Home = lazy(() => import('pages/Home'));
 const Movies = lazy(() => import('pages/Movies'));
@@ -10,14 +9,8 @@ const Cast = lazy(() => import('components/Cast/Cast'));
 const Reviews = lazy(() => import('components/Reviews/Reviews'));
 
 const App = () => {
- 
   return (
     <>
-      <StyledNav>
-        <StyledNavLink to="/">Home</StyledNavLink>
-        <StyledNavLink to="/movies">Movies</StyledNavLink>
-      </StyledNav>
-
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

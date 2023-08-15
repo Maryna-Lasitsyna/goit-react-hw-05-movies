@@ -6,7 +6,6 @@ export const Container = styled.div`
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
- 
 `;
 
 export const Header = styled.header`
@@ -27,4 +26,9 @@ export const Link = styled(NavLink)`
   font-weight: 600;
   font-size: 24px;
   color: #191d1e;
+
+  &.active {
+    background-color: #555;
+    color: #fff;
+  }
 `;
