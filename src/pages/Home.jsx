@@ -7,6 +7,7 @@ const Home = () => {
   const [films, setFilms] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  
   useEffect(() => {
     const fetchTrendingFilms = () => {
       setLoading(true);
@@ -28,7 +29,7 @@ const Home = () => {
 
   return (
     <main>
-      <h1>Trending today </h1>
+      <h1>Trending today</h1>
       <MovieList films={films} />
       {loading && <Loader />}
     </main>
